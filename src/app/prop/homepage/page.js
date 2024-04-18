@@ -3,6 +3,7 @@ import "./page.css";
 import Navbar from "@/components/Navbar/Navbar";
 import Sidebar from "@/components/Sidebar/Sidebar";
 import { useUserAuth } from "../_utils/auth-context";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -15,10 +16,11 @@ export default function Home() {
             <h2 className="advisor-container-heading">Financial Advisors</h2>
 
             <div className="advisor-card-container">
-              <div className="advisor-card">
+              <Link href={`http://localhost:3000/prop/advisor`} className="advisor-card">
+
                 <img src="/pic-2.jpg" alt="" />
                 <p>Keith Piper</p>
-              </div>
+              </Link>
 
               <div className="advisor-card">
                 <img src="/pic-3.jpg" alt="" />

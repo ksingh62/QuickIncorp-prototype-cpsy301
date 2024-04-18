@@ -12,12 +12,12 @@ export default function Sidebar() {
         </div>
 
         <div className="sidebar-options">
-          <div className="sidebar-option active-sidebar-option">
+          <div className="sidebar-option ">
             <img src="/icon-board.svg" alt="" />
             <p>Register a Company</p>
           </div>
 
-          <div className="sidebar-option">
+          <div className="sidebar-option active-sidebar-option">
             <img src="/icon-board.svg" alt="" />
             <p>Book a Session with advisor</p>
           </div>
