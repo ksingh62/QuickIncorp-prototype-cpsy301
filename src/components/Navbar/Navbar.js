@@ -1,6 +1,6 @@
 
 import "./Navbar.css";
-import { useUserAuth } from "@/app/prop/_utils/auth-context";
+import { useUserAuth } from "@/app/prototype/_utils/auth-context";
 
 export default function Navbar() {
   const { user, gitHubSignIn, firebaseSignOut } = useUserAuth();

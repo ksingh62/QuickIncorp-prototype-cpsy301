@@ -1,25 +1,26 @@
 /* eslint-disable @next/next/no-img-element */
 import Image from "next/image";
 import "./Sidebar.css";
+import Link from "next/link";
 
 export default function Sidebar() {
   return (
     <div className="sidebar">
       <div className="sidebar-logo-options-container">
-        <div className="sidebar-logo-container">
+        <Link href={`/prototype/homepage`} className="sidebar-logo-container">
           <img src="/logo-mobile.svg" alt="" />
           <p>QuickIncorp</p>
-        </div>
+        </Link>
 
         <div className="sidebar-options">
           <div className="sidebar-option ">
             <img src="/icon-board.svg" alt="" />
-            <p>Register a Company</p>
+            <Link href='/prototype/register'>Register a Company</Link>
           </div>
 
           <div className="sidebar-option active-sidebar-option">
             <img src="/icon-board.svg" alt="" />
-            <p>Book a Session with advisor</p>
+            <Link href='/prototype/homepage'>Book a Session with advisor</Link>
           </div>
 
           <div className="sidebar-option">

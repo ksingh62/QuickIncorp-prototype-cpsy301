@@ -6,7 +6,7 @@ function page() {
   return (
     <>
       <div>Landing page</div>
-      <Link href='/prop'>Log in</Link>
+      <Link href='/prototype'>Log in</Link>
     </>
   );
 }

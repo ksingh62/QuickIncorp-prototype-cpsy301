@@ -8,6 +8,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useUserAuth } from "../_utils/auth-context";
 import { useEffect } from "react";
+import Layout from "@/components/Layout";
 
 export default function Home() {
   const { user } = useUserAuth();
@@ -24,17 +25,18 @@ export default function Home() {
   }, [user, router]);
 
   return (
+    <Layout>
     <div className="home-page">
-      <Sidebar />
+      {/* <Sidebar /> */}
       <div>
-        <Navbar />
+        {/* <Navbar /> */}
         
         <div className="advisor-parent-container">
           <div className="advisor-container">
             <h2 className="advisor-container-heading">Financial Advisors</h2>
 
             <div className="advisor-card-container">
-              <Link href={`http://localhost:3000/prop/advisor`} className="advisor-card">
+              <Link href={`http://localhost:3000/prototype/advisor`} className="advisor-card">
 
                 <img src="/pic-2.jpg" alt="" />
                 <p>Keith Piper</p>
@@ -86,5 +88,6 @@ export default function Home() {
         </div>
       </div>
     </div>
+    </Layout>
   );
 }

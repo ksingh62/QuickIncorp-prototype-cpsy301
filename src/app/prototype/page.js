@@ -14,7 +14,7 @@ export default function Page() {
 
   useEffect(() => {
     if (user) {
-      router.push('/prop/homepage');
+      router.push('/prototype/homepage');
     }
     // If there is a user, stay on this page or manage other routes as needed
   }, [user, router]);
@@ -58,7 +58,7 @@ export default function Page() {
       )}
 
       {user !== null && (
-        <Link className="text-lg hover:underline" href={`prop/homepage`}>
+        <Link className="text-lg hover:underline" href={`prototype/homepage`}>
           Continue to Homepage
         </Link>
       )}
