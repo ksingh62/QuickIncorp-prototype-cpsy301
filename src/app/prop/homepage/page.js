@@ -1,16 +1,34 @@
 /* eslint-disable @next/next/no-img-element */
+"use client";
 import "./page.css";
 import Navbar from "@/components/Navbar/Navbar";
 import Sidebar from "@/components/Sidebar/Sidebar";
-import { useUserAuth } from "../_utils/auth-context";
+
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { useUserAuth } from "../_utils/auth-context";
+import { useEffect } from "react";
 
 export default function Home() {
+  const { user } = useUserAuth();
+
+  const router = useRouter();
+
+  useEffect(() => {
+    // Redirect user based on the authentication status
+    if (!user) {
+      // If there is no user, redirect to the landing page
+      router.push('/');
+    }
+    // If there is a user, stay on this page or manage other routes as needed
+  }, [user, router]);
+  
   return (
     <div className="home-page">
       <Sidebar />
       <div>
         <Navbar />
+        
         <div className="advisor-parent-container">
           <div className="advisor-container">
             <h2 className="advisor-container-heading">Financial Advisors</h2>

@@ -1,7 +1,10 @@
 
 import "./Navbar.css";
+import { useUserAuth } from "@/app/prop/_utils/auth-context";
 
 export default function Navbar() {
+  const { user, gitHubSignIn, firebaseSignOut } = useUserAuth();
+  console.log(user)
   return (
     <>
       <nav className="nav-bar">
@@ -11,8 +14,12 @@ export default function Navbar() {
         <div>About Us</div>
         <div>FAQs</div>
         <div className="button-container">
-            <button className="user-info-button">@user_name</button>
-            <button className="sign-out-button">Sign Out</button>
+            {user ? (
+              <>
+                <button className="user-info-button">{user.displayName || 'No Name'}</button>
+                <button className="sign-out-button" onClick={firebaseSignOut}>Sign Out</button>
+              </>
+            ): ''}
         </div>
       </nav>
     </>
