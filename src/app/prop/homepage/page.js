@@ -22,7 +22,7 @@ export default function Home() {
     }
     // If there is a user, stay on this page or manage other routes as needed
   }, [user, router]);
-  
+
   return (
     <div className="home-page">
       <Sidebar />

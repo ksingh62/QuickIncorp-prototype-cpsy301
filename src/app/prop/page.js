@@ -3,11 +3,25 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useUserAuth } from "./_utils/auth-context";
+import { useEffect } from "react";
+import { useRouter } from "next/navigation";
 
 export default function Page() {
   const { user, gitHubSignIn, firebaseSignOut } = useUserAuth();
+  const router = useRouter();
 
   console.log(user);
+
+  useEffect(() => {
+    if (user) {
+      router.push('/prop/homepage');
+    }
+    // If there is a user, stay on this page or manage other routes as needed
+  }, [user, router]);
+
+  if (user) {
+    return <div>Redirecting to your homepage...</div>;
+  }
 
   return (
     <div>
