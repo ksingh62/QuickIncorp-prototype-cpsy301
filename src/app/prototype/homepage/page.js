@@ -36,7 +36,7 @@ export default function Home() {
             <h2 className="advisor-container-heading">Financial Advisors</h2>
 
             <div className="advisor-card-container">
-              <Link href={`http://localhost:3000/prototype/advisor`} className="advisor-card">
+              <Link href={`/prototype/advisor`} className="advisor-card">
 
                 <img src="/pic-2.jpg" alt="" />
                 <p>Keith Piper</p>

@@ -24,8 +24,9 @@ export default function Page() {
   }
 
   return (
-    <div>
+    <div className="mt-4 flex justify-center flex-col items-center gap-5">
       <h1 className="text-4xl font-bold mb-5">QuickIncorp App</h1>
+      <p className="font-bold text-2xl mb-2 ">Login to get stated!</p>
       {user ? (
         <p className="text-lg">
           Signed In as {user.displayName} ({user.email}).
@@ -44,10 +45,10 @@ export default function Page() {
         <div className="text-lg">
           <button
             onClick={gitHubSignIn}
-            className="hover:underline ml-4 flex flex-direction items-center justify-center gap-5 border p-2 rounded-md"
+            className="hover:underline ml-4 flex flex-direction items-center justify-center gap-5 border p-2 rounded-xl px-4"
           >
             <Image
-              src="/github-mark.png"
+              src="/github-mark-white.png"
               alt="GitHub logo"
               width={25}
               height={25}

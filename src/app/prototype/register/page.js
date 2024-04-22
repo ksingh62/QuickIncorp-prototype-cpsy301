@@ -20,7 +20,7 @@ function page() {
   }, [user, router]);
   return (
     <Layout>
-    <div>page</div>
+    <div>Register Company page</div>
     </Layout>
   )
 }

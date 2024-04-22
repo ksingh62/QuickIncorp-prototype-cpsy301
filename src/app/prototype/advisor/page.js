@@ -60,17 +60,6 @@ export default function Page() {
               </div>
             </div>
 
-            {/* <div className="movie-genre">
-                    <h3>Genre</h3>
-                    <div className="movie-genre-container">
-                        {movieData.genres.map((genre, index) => (
-                            <span className="bordered-info-button" key={index}>
-                                {genre.name}{" "}
-                            </span>
-                        ))}
-                    </div>
-                </div> */}
-
             <div className="movie-synopsis">
               <h3>Synopsis</h3>
               <p>
@@ -85,32 +74,6 @@ export default function Page() {
                 finance, healthcare, and manufacturing.
               </p>
             </div>
-
-            {/* <div className="movie-cast">
-                    <h3>Cast</h3>
-                    <div className="movie-cast-container">
-                        {creditData &&
-                            creditData.cast.length !== 0 &&
-                            creditData.cast.map((c, index) => (
-                                <span className="bordered-info-button" key={index}>
-                                    {c.name}
-                                </span>
-                            ))}
-                    </div>
-                </div> */}
-
-            {/* <div className="movie-button-container">
-                    {movieData.homepage && (
-                        <button className="website-button">
-                            <a href={movieData.homepage}>Website</a>
-                        </button>
-                    )}
-                    <button className="website-button">
-                        <a href={`https://www.imdb.com/title/${movieData.imdb_id}`}>
-                            IMDB
-                        </a>
-                    </button>
-                </div> */}
           </div>
         </section>
       </div>
