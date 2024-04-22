@@ -8,6 +8,7 @@ import Layout from "@/components/Layout";
 import { useUserAuth } from "../_utils/auth-context";
 import { useEffect } from "react";
 import { useRouter } from 'next/navigation';
+import Link from "next/link";
 export default function Page() {
   const { user } = useUserAuth();
 
@@ -74,6 +75,7 @@ export default function Page() {
                 finance, healthcare, and manufacturing.
               </p>
             </div>
+            <Link href={`https://calendly.com/`} className="bg-sky-500 w-1/2 ml-28 p-2 rounded-xl text-center">Book session on Calendly</Link>
           </div>
         </section>
       </div>
