@@ -25,12 +25,12 @@ export default function Sidebar() {
 
           <div className="sidebar-option">
             <img src="/icon-board.svg" alt="" />
-            <p>Tax Management</p>
+            <Link href='/prototype/tax'>Tax Management</Link>
           </div>
 
           <div className="sidebar-option">
             <img src="/icon-board.svg" alt="" />
-            <p>Inbox</p>
+            <Link href='/prototype/inbox'>Inbox</Link>
           </div>
         </div>
       </div>

@@ -19,75 +19,85 @@ export default function Home() {
     // Redirect user based on the authentication status
     if (!user) {
       // If there is no user, redirect to the landing page
-      router.push('/');
+      router.push("/");
     }
     // If there is a user, stay on this page or manage other routes as needed
   }, [user, router]);
 
   return (
     <Layout>
-    <div className="home-page">
-      {/* <Sidebar /> */}
-      <div>
-        {/* <Navbar /> */}
-        
-        <div className="advisor-parent-container">
-          <div className="advisor-container">
-            <h2 className="advisor-container-heading">Financial Advisors</h2>
+      <div className="home-page">
+        {/* <Sidebar /> */}
+        <div>
+          {/* <Navbar /> */}
 
-            <div className="advisor-card-container">
+          <div className="advisor-parent-container">
+            <div className="advisor-container">
+              <h2 className="advisor-container-heading">Financial Advisors</h2>
+
+              <div className="advisor-card-container">
+                <Link href={`/prototype/advisor`} className="advisor-card">
+                  <img src="/pic-2.jpg" alt="" />
+                  <p>Keith Piper</p>
+                </Link>
+
+                <div className="advisor-card">
+                  <Link href={`/prototype/advisor/a`} className="advisor-card">
+                    <img src="/pic-3.jpg" alt="" />
+                    <p>Andrew Scott</p>
+                  </Link>
+                </div>
+
+                <div className="advisor-card">
+                  <Link href={`/prototype/advisor/b`} className="advisor-card">
+                    <img src="/pic-4.jpg" alt="" />
+                    <p>Abigail Nolan</p>
+                  </Link>
+                </div>
+
+                <div className="advisor-card">
+                  <Link href={`/prototype/advisor/c`} className="advisor-card">
+                    <img src="/pic-1.jpg" alt="" />
+                    <p>Faith Morris</p>
+                  </Link>
+                </div>
+              </div>
+            </div>
+
+            <div className="advisor-container">
+              <h2 className="advisor-container-heading">Legal Advisors</h2>
+
+              <div className="advisor-card-container">
               <Link href={`/prototype/advisor`} className="advisor-card">
+                  <img src="/pic-2.jpg" alt="" />
+                  <p>Keith Piper</p>
+                </Link>
 
-                <img src="/pic-2.jpg" alt="" />
-                <p>Keith Piper</p>
-              </Link>
+                <div className="advisor-card">
+                  <Link href={`/prototype/advisor/a`} className="advisor-card">
+                    <img src="/pic-3.jpg" alt="" />
+                    <p>Andrew Scott</p>
+                  </Link>
+                </div>
 
-              <div className="advisor-card">
-                <img src="/pic-3.jpg" alt="" />
-                <p>Andrew Scott</p>
-              </div>
+                <div className="advisor-card">
+                  <Link href={`/prototype/advisor/b`} className="advisor-card">
+                    <img src="/pic-4.jpg" alt="" />
+                    <p>Abigail Nolan</p>
+                  </Link>
+                </div>
 
-              <div className="advisor-card">
-                <img src="/pic-4.jpg" alt="" />
-                <p>Abigail Nolan</p>
-              </div>
-
-              <div className="advisor-card">
-                <img src="/pic-1.jpg" alt="" />
-                <p>Faith Morris</p>
-              </div>
-            </div>
-          </div>
-
-          <div className="advisor-container">
-            <h2 className="advisor-container-heading">Legal Advisors</h2>
-
-            <div className="advisor-card-container">
-              <div className="advisor-card">
-                <img src="/pic-2.jpg" alt="" />
-                <p>Keith Piper</p>
-              </div>
-
-              <div className="advisor-card">
-                <img src="/pic-3.jpg" alt="" />
-                <p>Andrew Scott</p>
-              </div>
-
-              <div className="advisor-card">
-                <img src="/pic-4.jpg" alt="" />
-                <p>Abigail Nolan</p>
-              </div>
-
-              <div className="advisor-card">
-                <img src="/pic-1.jpg" alt="" />
-                <p>Faith Morris</p>
+                <div className="advisor-card">
+                  <Link href={`/prototype/advisor/c`} className="advisor-card">
+                    <img src="/pic-1.jpg" alt="" />
+                    <p>Faith Morris</p>
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
-
         </div>
       </div>
-    </div>
     </Layout>
   );
 }

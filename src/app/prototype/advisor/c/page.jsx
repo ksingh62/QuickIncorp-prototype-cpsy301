@@ -5,7 +5,7 @@ import Sidebar from "@/components/Sidebar/Sidebar";
 import "./page.css";
 import Layout from "@/components/Layout";
 
-import { useUserAuth } from "../_utils/auth-context";
+import { useUserAuth } from "../../_utils/auth-context";
 import { useEffect } from "react";
 import { useRouter } from 'next/navigation';
 import Link from "next/link";
@@ -31,11 +31,11 @@ export default function Page() {
         {/* <Navbar /> */}
         <section className="movie-section">
           <div className="movie-poster-container">
-            <img src="/pic-2.jpg" alt="" />
+            <img src="/pic-1.jpg" alt="" />
           </div>
 
           <div className="movie-details-container">
-            <h2 className="font-bold text-center text-2xl">Keith Piper</h2>
+            <h2 className="font-bold text-center text-2xl">Faith Morris</h2>
 
             <div className="movie-ratings-container"></div>
 
@@ -52,7 +52,7 @@ export default function Page() {
 
               <div className="info-tab">
                 <h3>Email</h3>
-                <span>keith.piper@quickincrops.com</span>
+                <span>faith.morris@quickincrops.com</span>
               </div>
 
               <div className="info-tab">
