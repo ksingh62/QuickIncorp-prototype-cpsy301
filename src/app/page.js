@@ -10,7 +10,7 @@ export default function LandingPage() {
     <>
       <nav className="nav-bar">
 
-      <Link href={`/`} className="sidebar-logo-container">
+        <Link href={`/`} className="sidebar-logo-container">
           <img src="/logo-mobile.svg" alt="" />
           <p>QuickIncorp</p>
         </Link>
