@@ -18,7 +18,7 @@ export default function Navbar() {
         <div className="button-container">
             {user ? (
               <>
-                <button className="user-info-button">{user.auth.currentUser.reloadUserInfo.screenName || 'No Name'}</button>
+                <button className="user-info-button">@{user.auth.currentUser.reloadUserInfo.screenName || user.displayName || 'No Name'}</button>
                 <button className="sign-out-button" onClick={firebaseSignOut}>Sign Out</button>
               </>
             ): ''}
